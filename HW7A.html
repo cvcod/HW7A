@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><title>HW7.html</title>
+<script>
+ 
+   function GetVolume( l, w, h )
+         {
+           var Result = l * w * h;
+           return Result;
+         }
+
+   function startProcess()
+         {
+           var Length, Width, Height;
+           
+           for(var i = 1; i <= 10; i++)
+              {
+                Length = i + 2;
+                Width = i + 3;
+                Height = i + 4;
+
+                var res = GetVolume( Length, Width, Height );
+                
+                 if(res < 60)
+                    { document.write('<h3>Very Small Volume: ' + res + '</h3>'); }
+                 else if((res >= 60) && (res <= 70))
+                    { document.write('<h3>Small Volume: ' + res + '</h3>'); }
+                 else if((res >= 71) && (res <= 80))
+                    { document.write('<h3> Medium Volume: ' + res + '</h3>'); }
+                 else if((res >= 81) && (res <= 90))
+                    { document.write('<h3>Large Volume: ' + res + '</h3>'); }
+                 else if((res >= 91) && (res <= 100))
+                    { document.write('<h3>Extra Large Volume: ' + res + '</h3>'); }
+                 else 
+                    { document.write('<h3>Extremely Large Volume: ' + res + '</h3>'); }
+ 
+                
+               }
+           }
+
+   startProcess();
+
+</script>
+</head>
+<body>
+</body>
+</html> 
